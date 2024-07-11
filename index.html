@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- The main Style File  -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="page">
@@ -20,8 +22,9 @@
               <i class="fa-brands fa-staylinked"></i>
               <h2>StatSage</h2>
             </div>
+            <i class="fa-solid fa-xmark close"></i>
             <i class="fa-regular fa-circle menu-toggle"></i>
-            <i class="fa-regular fa-circle-dot menu-toggle active"></i>
+            <i class="fa-regular fa-circle-dot menu-toggle dot active"></i>
           </div>
           <div class="accordion">
             <div class="accordion-item">
@@ -321,21 +324,21 @@
               </div>
             </div>
             <div class="accordion-item">
-              <div class="accordion-header">
+              <div class="accordion-header open">
                 <i class="fa-solid fa-truck"></i>
                 <h4>Logistics</h4>
                 <span class="accordion-toggle">
                   <i class="fa-solid fa-chevron-right arrow"></i>
                 </span>
               </div>
-              <div class="accordion-content">
+              <div class="accordion-content active">
                 <div class="sub-accordion">
                   <div class="accordion-item">
-                    <a href="dashboard-logistics.html">
-                      <div class="accordion-header">
+                    <div class="accordion-header open">
+                      <a href="dashboard-logistics.html">
                         <h4>Dashboard</h4>
-                      </div>
-                    </a>
+                      </a>
+                    </div>
                   </div>
                   <div class="accordion-item">
                     <div class="accordion-header">
@@ -586,6 +589,9 @@
       <div class="content">
         <main class="container">
           <header class="header">
+            <div class="toggle-navbar">
+              <i class="fa-solid fa-bars"></i>
+            </div>
             <div class="search">
               <i class="fa-solid fa-search"></i>
               <input type="text" placeholder="Search..." />
@@ -786,85 +792,507 @@
               </div>
             </div>
           </header>
-          <!-- Start Analytics Page -->
-          <div class="analytics-page">
-            <!-- Start Website Analytics Widget -->
-            <div class="analytics-widget">
-              <div class="boxes">
-                <div class="box">
-                  <h2>Website Analytics</h2>
-                  <p>Total 28.5% Conversion Rate</p>
-                  <div class="details">
-                    <div class="text">
-                      <h4>Traffic</h4>
-                      <div class="row">
-                        <div class="col">
-                        <p><span>28%</span> <span>Seassions</span></p>
-                        <p><span>1.2K</span> <span>Leads</span></p>
-                        </div>
-                        <div class="col">
-                          <p><span>3.1K</span> <span>Page Views</span></p>
-                          <p><span>12%</span> <span>Conversions</span></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="img">
-                      <img src="images/card-website-analytics-1.png" alt="">
-                    </div>
+          <!-- Start Dashboard Logistics Page -->
+          <div class="dashboard-page">
+            <!-- Start Cards Widget -->
+            <div class="cards-widget">
+              <div>
+                <div class="card">
+                  <div class="card-heading">
+                    <span class="icon">
+                      <i class="fa-solid fa-truck"></i>
+                    </span>
+                    <h2 class="num">24</h2>
+                  </div>
+                  <div class="card-body">
+                    <p>On route vehicles</p>
+                    <span>+18.3% <small>than last week</small></span>
                   </div>
                 </div>
-                <div class="box">
-                  <h2>Website Analytics</h2>
-                  <p>Total 28.5% Conversion Rate</p>
-                  <div class="details">
-                    <div class="text">
-                      <h4>Revenue Sources</h4>
-                      <div class="row">
-                        <div class="col">
-                        <p><span>268</span> <span>Direct</span></p>
-                        <p><span>175</span> <span>Referrals</span></p>
-                        </div>
-                        <div class="col">
-                          <p><span>580</span> <span>Organic</span></p>
-                          <p><span>1.4K</span> <span>Campaign</span></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="img">
-                      <img src="images/card-website-analytics-2.png" alt="">
-                    </div>
+                <div class="card">
+                  <div class="card-heading">
+                    <span class="icon">
+                      <i class="fa-solid fa-info"></i>
+                    </span>
+                    <h2 class="num">45</h2>
+                  </div>
+                  <div class="card-body">
+                    <p>Vehicles with errors</p>
+                    <span>-8.7% <small>than last week</small></span>
                   </div>
                 </div>
-                <div class="box">
-                  <h2>Website Analytics</h2>
-                  <p>Total 28.5% Conversion Rate</p>
-                  <div class="details">
-                    <div class="text">
-                      <h4>Spending</h4>
-                      <div class="row">
-                        <div class="col">
-                        <p><span>2h</span> <span>Spend</span></p>
-                        <p><span>123</span> <span>Order</span></p>
-                        </div>
-                        <div class="col">
-                          <p><span>33</span> <span>Order Size</span></p>
-                          <p><span>12K</span> <span>Items</span></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="img">
-                      <img src="images/card-website-analytics-3.png" alt="">
-                    </div>
+              </div>
+              <div>
+                <div class="card">
+                  <div class="card-heading">
+                    <span class="icon">
+                      <i class="fa-solid fa-object-ungroup"></i>
+                    </span>
+                    <h2 class="num">12</h2>
+                  </div>
+                  <div class="card-body">
+                    <p>Deviated from route</p>
+                    <span>+4.3% <small>than last week</small></span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-heading">
+                    <span class="icon">
+                      <i class="fa-regular fa-clock"></i>
+                    </span>
+                    <h2 class="num">83</h2>
+                  </div>
+                  <div class="card-body">
+                    <p>Late vehicles</p>
+                    <span>-2.5% <small>than last week</small></span>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- End Website Analytics Widget -->
+            <!-- End Cards Widget -->
+            <div class="flex">
+              <!-- Start Vehicles Overview Widget -->
+              <div class="vehicles-overview flex-1">
+                <div class="overview-heading">
+                  <h2>Vehicles Overview</h2>
+                  <div class="more">
+                    <span class="more-icon">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </span>
+                    <div class="select-more">
+                      <ul>
+                        <li>Select All</li>
+                        <li>Refresh</li>
+                        <li>Share</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="overview-body">
+                  <div class="vehicles-progress-labels">
+                    <div class="on-the-way" style="width: 39.7%">
+                      <h4>On the way</h4>
+                      <span></span>
+                    </div>
+                    <div class="unloading" style="width: 28.3%">
+                      <h4>Unloading</h4>
+                      <span></span>
+                    </div>
+                    <div class="loading" style="width: 17.4%">
+                      <h4>Loading</h4>
+                      <span></span>
+                    </div>
+                    <div class="waiting" style="width: 14.6%">
+                      <h4>Waiting</h4>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class="vehicles-overview-progress">
+                    <div class="on-the-way" style="width: 39.7%">
+                      <span>39.7%</span>
+                    </div>
+                    <div class="unloading" style="width: 28.3%">
+                      <span> 28.3%</span>
+                    </div>
+                    <div class="loading" style="width: 17.4%">
+                      <span>17.4%</span>
+                    </div>
+                    <div class="waiting" style="width: 14.6%">
+                      <span>14.6%</span>
+                    </div>
+                  </div>
+                  <div class="vehicles-overview-details">
+                    <div class="on-the-way">
+                      <div class="text">
+                        <i class="fa-solid fa-car-side"></i>
+                        <span>On the way</span>
+                      </div>
+                      <div class="details">
+                        <p>2hr 10min</p>
+                        <span>39.7%</span>
+                      </div>
+                    </div>
+                    <div class="unloading">
+                      <div class="text">
+                        <i class="fa-regular fa-circle-down"></i>
+                        <span>Unloading</span>
+                      </div>
+                      <div class="details">
+                        <p>3hr 15min</p>
+                        <span>28.3%</span>
+                      </div>
+                    </div>
+                    <div class="loading">
+                      <div class="text">
+                        <i class="fa-regular fa-circle-up"></i>
+                        <span>Loading</span>
+                      </div>
+                      <div class="details">
+                        <p>1hr 24min</p>
+                        <span>17.4%</span>
+                      </div>
+                    </div>
+                    <div class="waiting">
+                      <div class="text">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Waiting</span>
+                      </div>
+                      <div class="details">
+                        <p>5hr 19min</p>
+                        <span>14.6%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Vehicles Overview Widget -->
+              <!-- Start Shipment Statistics Widget -->
+              <div class="shipment-statistics flex-1">
+                <div class="shipment-heading">
+                  <h2>Shipment Statistics</h2>
+                  <div class="month">
+                    <div class="container-month">
+                      <p class="selected-month">January</p>
+                      <span class="month-icon">
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </span>
+                    </div>
+                    <div class="select-month">
+                      <ul>
+                        <li>January</li>
+                        <li>February</li>
+                        <li>March</li>
+                        <li>April</li>
+                        <li>May</li>
+                        <li>June</li>
+                        <li>July</li>
+                        <li>August</li>
+                        <li>September</li>
+                        <li>October</li>
+                        <li>November</li>
+                        <li>December</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="shipment-body">
+                  <canvas id="shipment-chart" width="400" height="400"></canvas>
+                </div>
+              </div>
+              <!-- End Shipment Statistics Widget -->
+              <!-- Start Delivery Performance Widget -->
+              <div class="delivery-performance">
+                <div class="performance-heading">
+                  <h2>Vehicles Overview</h2>
+                  <div class="more">
+                    <span class="more-icon">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </span>
+                    <div class="select-more">
+                      <ul>
+                        <li>Select All</li>
+                        <li>Refresh</li>
+                        <li>Share</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="performance-body">
+                  <div class="box">
+                    <div class="item">
+                      <div class="item-content">
+                        <span class="icon">
+                          <i class="fa-solid fa-cube"></i>
+                        </span>
+                        <div class="text">
+                          <h4>Packages in transit</h4>
+                          <div class="rate up">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            <span>25.8%</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="num">10K</span>
+                    </div>
+                    <div class="item">
+                      <div class="item-content">
+                        <span class="icon">
+                          <i class="fa-solid fa-truck"></i>
+                        </span>
+                        <div class="text">
+                          <h4>Packages out for delivery</h4>
+                          <div class="rate up">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            <span>4.3%</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="num">5K</span>
+                    </div>
+                    <div class="item">
+                      <div class="item-content">
+                        <span class="icon">
+                          <i class="fa-regular fa-clock"></i>
+                        </span>
+                        <div class="text">
+                          <h4>Packages deliverd</h4>
+                          <div class="rate down">
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <span class="num">12.5%</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="num">15K</span>
+                    </div>
+                    <div class="item">
+                      <div class="item-content">
+                        <span class="icon">
+                          <i class="fa-solid fa-percent"></i>
+                        </span>
+                        <div class="text">
+                          <h4>Delivery success rate</h4>
+                          <div class="rate up">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            <span class="num">35.6%</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="num">95%</span>
+                    </div>
+                    <div class="item">
+                      <div class="item-content">
+                        <span class="icon">
+                          <i class="fa-regular fa-clock"></i>
+                        </span>
+                        <div class="text">
+                          <h4>Average delivery time</h4>
+                          <div class="rate down">
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <span class="num">2.15%</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="num">2.5day</span>
+                    </div>
+                    <div class="item">
+                      <div class="item-content">
+                        <span class="icon">
+                          <i class="fa-solid fa-users"></i>
+                        </span>
+                        <div class="text">
+                          <h4>Customer satisfaction</h4>
+                          <div class="rate up">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            <span class="num">5.7%</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="num">4.5/5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Delivery Performance Widget -->
+              <!-- Start Reasons for delivery exceptions Widget -->
+              <div class="reasons-delivery">
+                <div class="reasons-heading">
+                  <h2>Reasons for delivery exceptions</h2>
+                  <div class="more">
+                    <span class="more-icon">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </span>
+                    <div class="select-more">
+                      <ul>
+                        <li>Select All</li>
+                        <li>Refresh</li>
+                        <li>Share</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="reasons-body">
+                  <canvas id="reasons-chart" width="400" height="400"></canvas>
+                  <div class="text-center-of-canvas">
+                    <h1>30%</h1>
+                    <p>AVG, Exceptions</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Reasons for delivery exceptions Widget -->
+              <!-- Start Orders by Countries Widget -->
+              <div class="orders-countries">
+                <div class="orders-heading">
+                  <div class="text">
+                    <h2>Orders by Countries</h2>
+                    <p>62 deliveries in progress</p>
+                  </div>
+                  <div class="more">
+                    <span class="more-icon">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </span>
+                    <div class="select-more">
+                      <ul>
+                        <li>Select All</li>
+                        <li>Refresh</li>
+                        <li>Share</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="orders-body">
+                  <div class="btns">
+                    <ul>
+                    <li class="active">New</li>
+                    <li>Preparing</li>
+                    <li>Shipping</li>
+                    </ul>
+                  </div>
+                  <div class="body">
+                    <div class="item">
+                      <div class="box">
+                        <i class="fa-regular fa-circle-check sender"></i>
+                        <div class="text">
+                          <h4 class="sender">sender</h4>
+                          <p>Myrtle Ullrich</p>
+                          <span>101 Boulder, California(CA), 95959</span>
+                        </div>
+                      </div>
+                      <div class="box">
+                        <i class="fa-solid fa-location-dot receiver"></i>
+                        <div class="text">
+                          <h4 class="receiver">receiver</h4>
+                          <p>Barry Schowalter</p>
+                          <span>939 Orange, California(CA), 92118</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="box">
+                        <i class="fa-regular fa-circle-check sender"></i>
+                        <div class="text">
+                          <h4 class="sender">sender</h4>
+                          <p>Veronica Herman</p>
+                          <span>162 Windsor, California(CA), 95492</span>
+                        </div>
+                      </div>
+                      <div class="box">
+                        <i class="fa-solid fa-location-dot receiver"></i>
+                        <div class="text">
+                          <h4 class="receiver">receiver</h4>
+                          <p>Helen Jacobs</p>
+                          <span>487 Sunset, California(CA), 94043</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Orders by Countries Widget -->
           </div>
-          <!-- End Analytics Page -->
+          <!-- Start On route vehicles Widget -->
+          <div class="route-vehicles flex-1">
+            <div class="route-heading">
+              <div class="text">
+                <h2>On route vehicles</h2>
+              </div>
+              <div class="more">
+                <span class="more-icon">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </span>
+                <div class="select-more">
+                  <ul>
+                    <li>Select All</li>
+                    <li>Refresh</li>
+                    <li>Share</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="route-body">
+              <div class="location">
+                <label for="checkbox" class="checkbox">
+                  <i class="fa-solid fa-check"></i>
+                  <input type="checkbox" name="" id="checkbox">
+                </label>
+                <ul>
+                  <li>
+                    <h4>location</h4>
+                    <span class="arrows">
+                      <i class="fa-solid fa-chevron-up"></i>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                  </li>
+                  <li>
+                    <h4>starting route</h4>
+                    <span class="arrows">
+                      <i class="fa-solid fa-chevron-up"></i>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                  </li>
+                  <li class="mobile-hidden">
+                    <h4>ending route</h4>
+                    <span class="arrows">
+                      <i class="fa-solid fa-chevron-up"></i>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                  </li>
+                  <li class="mobile-hidden">
+                    <h4>warnings</h4>
+                    <span class="arrows">
+                      <i class="fa-solid fa-chevron-up"></i>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                  </li>
+                  <li class="mobile-hidden">
+                    <h4>progress</h4>
+                    <span class="arrows">
+                      <i class="fa-solid fa-chevron-up"></i>
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="data">
+                <span>No data available in table</span>
+              </div>
+              <div class="btns">
+                <span>Showing 0 to 0 of 0 entries</span>
+                <div class="arrow-btns">
+                  <button class="previous">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="previous">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End On route vehicles Widget -->
+          <!-- End Dashboard Logistics Page -->
+          <!-- Start Footer Section -->
+          <footer class="footer">
+            <div class="copyright">
+              <span>
+                <div class="con">
+                  &copy; 2024/7/12, made with 
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+                <p><span class="by">by</span> Youssef El Sayd</p>
+              </span>
+            </div>
+            <div class="links">
+              <span>License</span>
+              <span>More Themes</span>
+              <span>Documentation</span>
+              <span>Support</span>
+            </div>
+          </footer>
+          <!-- End Footer Section -->
         </main>
       </div>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/chart.js"></script>
   </body>
 </html>
